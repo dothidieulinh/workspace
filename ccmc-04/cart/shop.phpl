@@ -1,4 +1,6 @@
-
+<?php
+require_once("funx.php")
+$items = createItems();
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -16,10 +18,11 @@
 			<th>価格</th>
 			<th></th>
 		</tr>
+		<?php for ($i = 0 ; $i < count ($items); $i++) { ?>
 				<tr>
-			<td>アップライトピアノ</td>
-			<td>600,000円</td>
-			<td><a href="cart.html?id=0">カートに入れる</a></td>
+			<td><? $items[$i]->getName()?></td>
+			<td<?=$iitems[$i]->grtPrice() ?>円</td>
+			<td><a href="cart.php?id=0">カートに入れる</a></td>
 		</tr>
 				<tr>
 			<td>電子ピアノ</td>
@@ -53,4 +56,4 @@
 		</tr>
 			</table>
 </body>
-</html>
+<html>
